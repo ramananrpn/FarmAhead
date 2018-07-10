@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body{
+	overflow-x: hidden;
+	overflow-y: scroll;
+}
+#outerbox
+{
+   width:2000px;
+   
+   overflow:hidden;
+}
+#sliderbox
+{
+	position:relative;
+	width:2800px;
+	animation: jatinder 15s infinite;
+	}
+#sliderbox img
+{
+	float:left;
+}
+@keyframes jatinder
+{
+0%
+{
+left:700px;
+}
+20%
+{
+left:-700px;
+}
+25%
+{
+	left:-700px;
+}
+45%
+{
+left:-700px;
+}
+50%
+{
+	left:-1400px;
+}
+70%
+{
+	left:-1400px;
+}
+75%
+{
+	left:-2100px;
+}
+95%
+{
+	left:-2100px;
+}
+100%
+{
+	left:-2800px;
+}
+*{
+  box-sizing:border-box;
+}
+.row:after
+{
+	content:"";
+	clear:both;
+	display:block;
+}
+[class*="col_"]
+{
+	float:left;
+	padding:15px;
+}
+.col_1 {width:8.33%;}
+.col_2 {width:17.33%;}
+.col_3 {width:30%;}
+.col_4 {width:33.33%;}
+.col_5 {width:41.66%;}
+.col_6 {width:50%;color:black;}
+.col_7 {widthL:58.3%;}
+.col_8 {width:66.66%;}
+.col_9 {width:75%;color:white;}
+.col_10 {width:82.3%;}
+.col_11 {width:91.55%;}
+.col_12 {width:100%;}
+</style>
+<style>
+html{
+font-family:Gabriola;
+}
+.color{
+background-color:#096;
+color:white;
+padding:7px;
+}
+.color2
+{background-color:#069;
+}
+.menu ul{
+list-style-type:none;
+margin:0;
+padding:0;
+}
+.menu li:hover
+{
+background-color:#0C0;
+}
+
+</style>
+</head>
+<body style="background-color:steelblue; font-style:italic; color:#FFF">
+
+<div class="color">
+<h1>FarmAhead</h1>
+</div>
+<div class="row">
+<div class="col_3 menu">
+<div class="color2">
+<ul>
+<li><strong>SCHEMES</strong></li>
+<br>
+<li><strong>LOANS</strong></li>
+</ul>
+</div>
+</div>
+<div id="outerbox">
+<div id="sliderbox">
+<img src="farm1.jpg">
+
+<img src="farm3.jpg">
+<img src="farm6.jpg">
+</div>
+</div>
+
+<div class="col_4">
+
+</div>
+
+<div class="col_9">
+<h1> LATEST SCHEMES</h1>
+<h2>
+Launch of Pradhan Mantri Fasal Bima Yojana  </h2>
+<div class="col_6">
+<p style="font-size:30px"><strong>
+    Farming has become an unreliable sector. Farmers are always unsure of the yield they’ll reap, but strive to draw the maximum benefits out of their investments and effort. Often farmers might be at the receiving end, with natural calamities like droughts and floods affecting their yield adversely. To resolve the problem of unpredictable nature of farming and prevent farmer suicides in the country, the Government launched PM Mantri Fasal Bima Yojana in early 2016. It’s a crop insurance policy with relaxed premium rates on the principal sum insured for farmers. Implemented with a budget of Rs 17,600 crore, this scheme will provide financial support to farmers and cover for their losses. This initiative is expected to go on floors from the next Kharif season of farming, that is from June 2016.
+
+		</strong></p>
+		</div>
+</div>
+</body>
+</html>

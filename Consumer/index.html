@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Welcome-Consumer</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Material Design Bootstrap -->
+    <link href="css/mdb.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+<style type="text/css">
+ body {
+      position: relative;
+      overflow-x: hidden;
+      overflow-y: scroll; 
+  }
+  .nav :hover{
+    background-color: black;
+  }
+/* fallback */
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Material Icons'), local('MaterialIcons-Regular'), url(woff/mdbicons.woff2) format('woff2');
+}
+
+
+
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-feature-settings: 'liga';
+  -webkit-font-smoothing: antialiased;
+}
+   
+   .bg{
+    background: url('img/563.jpg');
+    background-size: 100% 720px; width:xxpx;
+    height:xxpx;
+    background-repeat: no-repeat;
+   }
+   /* Scrollbar */
+    
+    ::-webkit-scrollbar {
+        width: 8px;
+    }
+    /* Track */
+    
+    ::-webkit-scrollbar-track {
+        -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+        -webkit-border-radius: 10px;
+        border-radius: 10px;
+    }
+    /* Handle */
+    
+    ::-webkit-scrollbar-thumb {
+        -webkit-border-radius: 10px;
+        border-radius: 10px;
+        background: #your-color;
+        -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+    }
+    
+    ::-webkit-scrollbar-thumb:window-inactive {
+       background: #your-color;
+    }
+</style>
+</head>
+
+<body >
+     <!--Navbar-->
+     <div class="row">
+        <nav class="navbar navbar-fixed-top navbar-toggleable scrolling-navbar navbar-light " style="background-color:#262626 ">
+
+            <div class="container">
+               <a class="navbar-toggler navbar-toggler-right hidden-md hidden-lg " type="button" data-toggle="collapse" data-target="#collapseEx12" aria-controls="collapseEx2" aria-expanded="false" aria-label="Toggle navigation">
+            <span><img src="icons/nav-side.png"></span>
+        </a>
+                <!--Navbar Brand-->
+                <a class="navbar-brand " href="#"><img src="img/nav1.png" style="height: 35px;width: 170px;"></a>
+                <!--Links-->
+        <div class="collapse navbar-collapse" id="collapseEx12">
+                <ul class="nav navbar-nav smooth-scroll">
+                    <li class="nav-item active smooth-scroll">
+                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item smooth-scroll">
+                        <a class="nav-link" href="#store">Store</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Offers</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About</a>
+                    </li>
+                </ul>
+                 <ul class="nav navbar-nav navbar-right smooth-scroll mr-auto" style="height: 5px;">
+                    
+                    <li class="nav-item" >
+                   <a class="" style="color: orange;"><i class="material-icons left">power_settings_new</i>Log out</a>
+                    </li>
+                    <li class="nav-item" >
+                   <a class="" style="color: orange;"><i class="material-icons left">perm_identity</i>
+                   <?php 
+                        session_start();
+                        echo $_SESSION['c_un'];
+                          ?></a>
+                    </li>
+
+                       <!-- <li class="nav-item" style="margin-top: -10px;" >
+                         <a class="btn btn-primary btn-lg" data-toggle="modal" data-target="#cart-modal-ex" style="height: 54px;"> 
+          <i class="material-icons">shopping_cart</i> Cart </a></li>
+            <li class="nav-item" style="margin-top: -10px;" > <button href="#" class="btn btn-danger btn-lg waves-light" style="h" value="Cart" style="height: 20px; " >
+          <i class="material-icons">power_settings_new</i> Log Out </button></li>
+                  <li class="nav-item"><a href="#" style="margin-right: -100px;"><i class="material-icons" style="color: white;">settings</i></a></li>-->  
+                      </ul>
+                <!--Search form-->
+               <!-- <form class="form-inline pull-xs-right" style="">
+                    <input class="form-control" type="text" placeholder="Search" style="color: white; ">
+                </form>-->
+         </div>            
+            </div>
+
+        </nav>
+        </div>
+        <!--/.Navbar-->
+        <div class="row " style=" background: url('img/563.jpg');
+    background-size: 100% 720px; width:xxpx;
+    height:670px;
+    background-repeat: no-repeat;">
+    <div class="row">
+        <div class="col-lg-4 col-md-4  col-sm-2 col-xs-0 center-block"></div>
+        <div class=" jumbotron  z-depth-2 col-lg-5 col-md-5 col-xs-12 col-sm-8" style="margin-top: 200px; background-color:   #1a1a1a;opacity: 0.7;margin-left: -30px;"  >
+        <strong style="font-size: 30px;color: white;"> WELCOME <br> TO <br>FarmAhead Online Store</strong> 
+        </div>
+        </div>
+          <!-- Button trigger modal -->
+          <div class="row">
+<a class="btn btn-primary btn-lg" data-toggle="modal" data-target="#cart-modal-ex" style="z-index: ;">
+   <i class="material-icons left">shopping_cart</i>
+    <span>Open my cart</span><span class="badge social-counter"></span>
+</a>
+</div>
+<!--<span class="counter">4</span>-->
+        </div>
+        
+       
+
+<!-- Modal -->
+<div class="modal fade cart-modal" id="cart-modal-ex" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <!--Content-->
+        <div class="modal-content">
+            <!--Header-->
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title" id="myModalLabel">Your cart</h4>
+            </div>
+            <!--Body-->
+            <div class="modal-body">
+
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Product name</th>
+                            <th>Price</th>
+                            <th>Remove</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>Product 1</td>
+                            <td>Rs 500</td>
+                            <td><a><i class="glyphicon glyphicon-remove"></i></a></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                            <td>Product 2</td>
+                            <td>Rs 1000</td>
+                            <td><a><i class="glyphicon glyphicon-remove"></i></a></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">3</th>
+                            <td>Product 3</td>
+                            <td>Rs 100</td>
+                            <td><a><i class="glyphicon glyphicon-remove"></i></a></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">4</th>
+                            <td>Product 4</td>
+                            <td>RS 5000</td>
+                            <td><a><i class="glyphicon glyphicon-remove"></i></a></td>
+                        </tr>
+                        <tr class="total">
+                            <th scope="row">5</th>
+                            <td>Total</td>
+                            <td>Rs 10000</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <button class="btn btn-primary">Checkout</button>
+
+            </div>
+            <!--Footer-->
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+        <!--/.Content-->
+    </div>
+</div>
+       <div class="row" style="background-color: ;">
+         <!--Section: Products v.4-->
+<section class="section">
+
+    <!--Section heading-->
+    <h1 class="section-heading">Category</h1>
+    <!--Section sescription-->
+    <p class="section-description">Choose any one of the category in which you want to buy/order the crop you Want</p>
+
+    <!--First row-->
+    <div class="row " id="store">
+    <div class="" style="">
+    <a href="cons-vege.php">
+            <div class="col-md-3 col-sm-3" >
+            <!--Card-->
+                <div class="collection-card hoverable view overlay hm-zoom z-depth-3">
+                    <!--Card image-->
+                    <img src="vege.jpg" class="img-responsive">
+                    <div class="mask"></div>
+                    <!--Card footer-->
+                    <div class="card-footer rgba-white-strong">
+                        <!-- Title -->
+                        <a href="cons-vege.php" class="black-text" ><h5 class="h5-responsive ">Vegetables    <i class="material-icons">chevron_right</i></h5></a>
+                        <!--Card details-->
+                    </div>
+                </div>
+                <!--/.Card-->
+            </div>
+            </a>
+                <a href="cons-fruits.php">
+            <div class="col-md-3 col-sm-3">
+               <!--Card-->
+                <div class="collection-card hoverable view overlay hm-zoom z-depth-3">
+                    <!--Card image-->
+                    <img src="img/frits.jpg" class="img-responsive">
+                    <div class="mask"></div>
+                    <!--Card footer-->
+                    <div class="card-footer rgba-white-strong">
+                        <!-- Title -->
+                        <a href="" class="black-text"><h5 class="h5-responsive">Fruits <i class="material-icons">chevron_right</i></h5></a>
+                        <!--Card details-->
+                    </div>
+                </div>
+                <!--/.Card-->
+            </div>
+            </a>
+            <a href="cons-flowers.php">
+             <div class="col-md-3 col-sm-3">
+               <!--Card-->
+                <div class="collection-card hoverable view overlay hm-zoom z-depth-3">
+                    <!--Card image-->
+                    <img src="img/558.jpg" class="img-responsive">
+                    <div class="mask"></div>
+                    <!--Card footer-->
+                    <div class="card-footer rgba-white-strong">
+                        <!-- Title -->
+                        <a href="" class="black-text"><h5 class="h5-responsive">Flowers <i class="material-icons">chevron_right</i></h5></a>
+                        <!--Card details-->
+                    </div>
+                </div>
+                <!--/.Card-->
+            </div>
+            </a>
+            <a href="cons-nuts.php">
+             <div class="col-md-3 col-sm-3">
+               <!--Card-->
+                <div class="collection-card hoverable view overlay hm-zoom z-depth-3">
+                    <!--Card image-->
+                    <img src="img/nnn.jpg" class="img-responsive">
+                    <div class="mask"></div>
+                    <!--Card footer-->
+                    <div class="card-footer rgba-white-strong">
+                        <!-- Title -->
+                        <a href="" class="black-text"><h5 class="h5-responsive">Nuts Seeds Spices<i class="material-icons">chevron_right</i></h5></a>
+                        <!--Card details-->
+                    </div>
+                </div>
+                <!--/.Card-->
+            </div>
+            </a>
+        </div>
+
+        </div>
+        <div class="row">
+            
+
+        </div>
+        
+</section>
+  
+
+
+       </div>
+    <script type="text/javascript">
+        Waves.attach('.btn, .btn-floating', ['waves-light']);
+        Waves.attach('.view .mask', ['waves-light']);
+        Waves.attach('.waves-light', ['waves-light']);
+        Waves.attach('.navbar li', ['waves-light']);
+        Waves.init();
+    </script>
+<!--========================SCROLLSPY SMOOTH SCROLL ANIM SCRIPT============================-->
+<script>
+$(document).ready(function(){
+  // Add scrollspy to <body>
+  $('body').scrollspy({target: ".navbar", offset: 50});
+
+  // Add smooth scrolling on all links inside the navbar
+  $("#myNavbar a").on('click', function(event) {
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    }  // End if
+  });
+});
+</script>
+
+    <!-- SCRIPTS -->
+
+    <!-- JQuery -->
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+    <!-- Material Design Bootstrap -->
+    <script type="text/javascript" src="js/mdb.js"></script>
+
+</body>
+
+</html>
+    <!--Card-->
+                    <div class="col-md-3 col-lg-3">
+                    <div class="card card-product hoverable" style="height:350px;width:230px;">             
+                        <!--Image-->
+                        <div class="card-image waves-effect waves-block waves-light view overlay hm-white-slight">        
+                            <a href=""><img src="'."../".$sltcrop_res['img_url'].'" style="height:170px;width:300px;">
+                                <div class="mask"> </div>
+                            </a>
+                        </div>
+                        <!--/.Image-->
+                        <!--Card content: Name and price-->
+                        <div class=" text-center">
+                            <div class="">
+                                <a ><h5 class="product-title " style=" font-size:20px;">'
+                                      .$sltcrop_res['crop_name'].
+                                     '</h5></a>
+                            </div>
+                            <div class=" text-center" >
+                                  <p style="background-color:yellow;">Quantity  : ' .$sltcrop_res['yield_qty']. '&nbsp;' 
+                                  .$sltcrop_res['yield_qty_unit']. '   </p>
+                            </div>
+                            <div class="price">
+                                <p class="green-text medium-500">Rs . '
+                                .$sltcrop_res['exp_price'].
+                                '&nbsp;<span class="discount light-300 red-text">per ' 
+                                .$sltcrop_res['exp_price_unit'].
+                                '</span></p>
+                            </div>
+                        </div>
+                        <!--/.Card content: Name and price-->
+
+                        <!--Buttons-->
+                        <!--<div class="text-center">
+                            <a href="#" class="btn btn-default waves-effect waves-light">Buy now</a>-->
+                            <a href="#" class="btn waves-effect waves-light" data-toggle="modal" data-target="#crop-alter">View & Alter</a>
+                        </div>
+                        <!--/.Buttons-->
+                    </div>
+                    <!--/.Card-->
+
+                    </div>
+                    </div>
+                  

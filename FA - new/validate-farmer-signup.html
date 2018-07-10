@@ -1,0 +1,250 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width , initial-scale=1.0">
+<title>Signup-Farmer</title>
+<link rel="stylesheet" type="text/css" href="css/temp.css">
+
+<link rel="stylesheet" type="text/css" href="css/bootstrap-grid.min.css">
+<link rel="stylesheet" type="text/css" href="css/bootstrap-reboot.min.css">
+<link rel="stylesheet" type="text/css" href="css/bootstrap-flex.min.css">
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="css/bootstrap-3.3.4.css" >
+<link rel="stylesheet" type="text/css" href="css/bootstrap.theme.min.css">
+<script src="js/jquery-1.11.2.min.js" type="text/javascript"></script>
+<script src="js/bootstrap-3.3.4.js" type="text/javascript"></script>
+<style type="text/css">
+  .entry:not(:first-of-type)
+{
+    margin-top: 0px;
+}
+
+.glyphicon
+{
+    font-size: 12px;
+}
+
+</style>
+<body class="img-responsive" style="padding-top: 30px;">
+<!--================================NAVIGATION BAR============================-->
+<div  class="container-fluid">
+  <div class="row ">
+    <nav class=" navbar-inverse  navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand"  style="position: relative; top: -3px;" href="index.html"><img src="img/nav1.png" alt="Farmahead" height="25px;" width="133px; "></a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="" style="font-size: 20.5px;"><a href="index.html">Home </a></li>
+        <li class="dropdown" style="font-size: 20.5px;">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#S" >Services</span></a>
+          <ul class="dropdown-menu" style="font-size: 20.5px;">
+            <li><a href="#Services">Buy</a></li>
+            <li><a href="#">Sell</a></li>
+            <li><a href="#">Guidance</a></li>
+          </ul>
+        </li>
+        <li><a href="#" style="font-size: 20.5px;">Feedback</a></li>
+        <li><a href="#" style="font-size: 20.5px;">Contact Us</a></li>
+      </ul>
+        <ul class="nav navbar-nav navbar-right">
+        <li class="active"><a href="signup-select.html" style="font-size: 20.5px;"  data-toggle="tooltip" data-placement="bottom"  title="Click to Sign Up "><span  style="font-size: 20.5px;" class="glyphicon glyphicon-user" ></span> Sign Up</a></li>
+         <li class="dropdown" style="font-size: 20.5px;" >
+            <a href="Login.html" class="dropdown-toggle" data-toggle="dropdown" href="#S"   aria-haspopup="true" aria-expanded="false" ><span  style="font-size: 20.5px;" class="glyphicon glyphicon-log-in"></span> Login</a>
+               <ul class="dropdown-menu" style="font-size: 20.5px;">
+            <li ><a href="login-farmer.html" >  <img src="img/farm.png" style=" height: 30px;width: 30px;" data-toggle="tooltip" data-placement="left"  title="Click to Login as Farmer ">&nbsp;Farmer</a></li>
+            <li><a href="login-consumer.html">  <img src="img/consumer.png" style=" height: 30px;width: 30px;">&nbsp;Consumer</a></li>
+
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+  </div>
+  </div>
+  <!--=================================END TOP-NAVBAR================================-->
+  <!--=================================PROGRESS BAR AND FARMER FORM======================-->
+    <div class="row ">
+      <form id="msform" action="php-farmer_signup.php" method="POST" class="form-inline" autocomplete="off" data-toggle="validator" role="form">
+  <!-- progressbar -->
+ <ul id="progressbar">
+    <li class="active">Personal Details</li>
+    <!--<li>Communication details</li>-->
+    <li>Account Setup</li>
+  </ul>
+  <!-- fieldsets -->
+  <fieldset>
+  <div class="container" style="background-color: rgba(0, 0, 0,0.8);position: relative; width: 100%;border-radius: 5px;padding-bottom: 2px;left: 50px;">
+    <h2 class="fs-title">Personal Details</h2>
+  </div>
+    <h3 class="fs-subtitle">உங்கள் தனிப்பட்ட விவரங்களை பதிவு செய்யவும்  </h3>
+    <div class="form-input" >
+    <input class="form-control" type="text" name="fname" id="txt"  onkeyup = "Validate(this)" placeholder=" Name / பெயர்"  data-toggle="tooltip" data-placement="bottom"  title="உங்கள் பெயரை உள்ளிடவும்" required />
+      </div>
+   <div class="form-group row">
+    <div class="center-block">
+  <label for="example-date-input" class="col-xs-5 col-form-label" style="" data-toggle="tooltip" data-placement="left"  title="பிறந்த தேதி" required><h4><strong>Date Of Birth</strong></h4></label>
+  <div class="col-xs-7">
+        <?php //$date_entered = date('m/d/Y H:i:s'); ?>
+    <input class="form-control" type="date" value="01/01/1980" id="example-date-input" name="dob" data-toggle="tooltip" data-placement="right"  title="பிறந்த தேதி" required>
+  </div>
+  </div>
+</div>
+    <div class="row" style="text-align: center;" >
+        <div class="center-block">
+   <h4> <label class="custom-control custom-radio ">
+  <input id="radio1" name="sex" type="radio" class="custom-control-input" value="Male " required>&nbsp;
+  <span class="custom-control-indicator"></span>
+  <span class="custom-control-description">Male / ஆண்</span>
+</label>  &nbsp; &nbsp; &nbsp;
+<label class="custom-control custom-radio">
+  <input id="radio1" name="sex" type="radio" class="custom-control-input" value="Female">&nbsp;
+  <span class="custom-control-indicator"></span>
+  <span class="custom-control-description">Female /
+பெண்</span>
+</label></h4>
+        </div>
+
+
+        <textarea name="address" placeholder="Address / முகவரி"  data-toggle="tooltip" data-placement="bottom"  title="உங்கள் முகவரியை உள்ளிடவும்" required></textarea>
+
+        <!--<div class="form-group col-sm-4">
+         <input type="text" name="pin" placeholder="Pin-Code /
+அஞ்சல் குறியீடு" />
+    </div>-->
+
+           <div class="form-group col-sm-6">
+              <input type="text" name="city" placeholder="City / நகரம்" data-toggle="tooltip" data-placement="bottom"  title="நகரம்" required />
+
+            </div>
+            <div class="form-group col-sm-6">
+    <input type="text" name="state" placeholder="State / மாநிலம் " data-toggle="tooltip" data-placement="bottom"  title=" மாநிலம் " required />
+      </div>
+</div>
+ <small>Press Next <span class="glyphicon glyphicon-arrow-down"></span> to go to Next Step :)<br>அடுத்த படி செல்ல Next-ஐ அழுத்தவும்</small>
+<br>
+<!--<div id="dynamic-sa">
+  <div class="input-group entry" >
+      <input type="text" name="service-area" placeholder="Areas of Service"  data-toggle="tooltip" data-placement="bottom"  title="service Areas" class="form-control" style="" id="service_area"/>
+          <span class="input-group-btn">
+                              <button class="btn btn-success btn-add center-block" type="button" style="margin-bottom: 12px;" data-target="tag-controls" id="addtextbox">
+                                  <span class="glyphicon glyphicon-plus" ></span>
+                              </button>
+                          </span>
+                          </div>
+ </div>
+    <small>Press <span class="glyphicon glyphicon-plus gs"></span> to add another form field :)</small>
+<br><br>-->
+    <input type="button" name="next" class="next action-button" value="Next" data-toggle="tooltip" data-placement="right"  title="அடுத்த படி செல்ல ''கிளிக்''  செய்யவும் "  />
+
+  </fieldset>
+  <!--<fieldset>
+  <div class="container" style="background-color: rgba(0, 0, 0,0.8);position: relative; width: 100%;border-radius: 5px;padding-bottom: 2px;left: 50px;">
+    <h2 class="fs-title">Communication details</h2>
+  </div>
+    <h3 class="fs-subtitle">Fill in your exact residencial details</h3>
+        <textarea name="address" placeholder="Address"></textarea>
+    <input type="text" name="city" placeholder="City" />
+
+    <input type="text" name="phone" placeholder="Phone" maxlength="10" />
+    <input type="text" name="pin" placeholder="Pin-Code" />
+    <input type="text" name="state" placeholder="State" />
+
+    <input type="button" name="previous" class="previous action-button" value="Previous" />
+    <input type="button" name="next" class="next action-button" value="Next" />
+  </fieldset>-->
+  <fieldset>
+  <div class="container" style="background-color: rgba(0, 0, 0,0.8);position: relative; width: 100%;border-radius: 5px;padding-bottom: 2px;left: 50px;">
+    <h2 class="fs-title">Create your account</h2>
+    </div>
+    <h3 class="fs-subtitle">உங்கள் தொலைபேசி எண்ணை உள்ளிட்டு ஒரு PIN / கடவுச்சொல்லை அமைக்கவும் </h3>
+    <input type="text" class="form-control phone" name="phone" placeholder="Phone Number / தொலைபேசி எண்" maxlength="10" minlength="10" onkeyup="validatephone(this);" required  />
+
+    <input type="password" name="pin" placeholder="PIN / Password" class="form-control inputpass" minlength="4" maxlength="4"  id="pass1" required/>
+      <span class="help-block" style="color: black;margin-top: -2px;"><strong>*Minimum of 4 characters*</strong></span>
+
+    <input type="password" name="cpin" placeholder="Confirm PIN / Password" class="form-control inputpass" minlength="4" maxlength="4" placeholder="Enter again to validate"  id="pass2" onkeyup="checkPass(); return false;" required="" />
+     <span id="confirmMessage" class="confirmMessage"></span>
+
+     <small><br>
+*** உங்கள் PIN / கடவுச்சொல்லை நினைவில் கொள்ளவும்  ***</small><br>
+        <input type="button" name="previous" class="previous action-button" value="Previous" data-toggle="tooltip" data-placement="bottom"  title="முந்தைய படி செல்ல  ''கிளிக்''  செய்யவும்"/>
+    <input type="submit" name="submit" class="submit action-button" value="Submit" id="saveData" data-toggle="tooltip" data-placement="bottom"  title="உங்கள் கணக்கை உருவாக்க  ''கிளிக்''  செய்யவும்"  />
+  </fieldset>
+</form>
+</div>
+</div>
+  <!--======================================TOOL-TIP SCRIPT========================-->
+  <script type="text/javascript">
+  $(function ()
+    {
+      $('[data-toggle="tooltip"]').tooltip()
+  })
+</script>
+<!--====================================SCRIPT NON-WORTHY VALIDATION=================================-->
+<script type="text/javascript">
+  function validatephone(phone)
+{
+    var maintainplus = '';
+    var numval = phone.value
+    if ( numval.charAt(0)=='+' )
+    {
+        var maintainplus = '';
+    }
+    curphonevar = numval.replace(/[\\A-Za-z!"£$%^&\,*+_={};:'@#~,.Š\/<>?|`¬\]\[]/g,'');
+    phone.value = maintainplus + curphonevar;
+    var maintainplus = '';
+    phone.focus;
+}
+// validates text only
+function Validate(txt) {
+    txt.value = txt.value.replace(/[^a-zA-Z-'\n\r.\s]+/g, '');
+}
+//PASSWORD PIN
+function checkPass()
+{
+    //Store the password field objects into variables ...
+    var pass1 = document.getElementById('pass1');
+    var pass2 = document.getElementById('pass2');
+    //Store the Confimation Message Object ...
+    var message = document.getElementById('confirmMessage');
+    //Set the colors we will be using ...
+    var goodColor = "#66cc66";
+    var badColor = "#ff6666";
+    //Compare the values in the password field
+    //and the confirmation field
+    if(pass1.value == pass2.value){
+        //The passwords match.
+        //Set the color to the good color and inform
+        //the user that they have entered the correct password
+        pass2.style.backgroundColor = goodColor;
+        message.style.color = goodColor;
+        message.innerHTML = "Passwords Match"
+    }else{
+        //The passwords do not match.
+        //Set the color to the bad color and
+        //notify the user.
+        pass2.style.backgroundColor = badColor;
+        message.style.color = badColor;
+        message.innerHTML = "Passwords Do Not Match!"
+    }
+}
+
+</script>
+
+ <!--===========================FORM SCRIPT=================================-->
+  <script type="text/javascript" src="js/jquery-easing.js"></script>
+  <script src="js/easing-plugin.js" type="text/javascript"></script>
+  <script src="js/signup-script.js" type="text/javascript" ></script>
+
+</body>
+</html>
